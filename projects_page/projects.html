@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="p_styles.css">
+    <title>Meu Portfólio - Pedro</title>
+</head>
+<body>  
+    <header>
+        
+        <ul>
+            <button class="button-style"><li>Projetos</li></button>
+            <a href="/index.html"><li class="welcome">Bem-vindo(a)</li></a>
+            <a href="/about_me_page/about_me.html"><button class="button-style"><li>Sobre Mim</li></button></a>
+        </ul>
+    </header>
+
+    <img class="background" src="/img/abstract-gradient-neon-lights.jpg" alt="Background Image">
+
+    <section>
+        <div class="container">
+                <div class="popup-bg" id="popup" onclick="fecharPopup()"></div>
+                                    <div class="popup-content">
+                                    <div class="head">
+                                    <p id="textoPopup"></p>
+                                    <button class="close" id="closeBtn" onclick="fecharPopup()"><img src="/img/close.png"></button>
+                                    </div>
+                                    <div class="content-container">
+                                    <div class="img-container"><img  id="imagemPopup" src=""></div>
+                                    <div class="desc-box">
+                                        <div class="title">
+                                            
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                
+                <div class="extra-box">
+                    <h2>Acesse todos meus projetos no meu GitHub! ⭢</h2>
+                    <button class="github"><img src="https://avatars.githubusercontent.com/u/229395840?v=4"><a href="https://github.com/pedrohl-dev">pedrohl_dev</a></button>
+                </div>
+                <div class="line"></div>
+                
+                <table >
+                <tr>
+                    <td><button onclick="abrirPopup(this, '/projects_img/login_borda.png')"><img class="imagemDiv" src="/projects_img/login_borda.png"><p>Projeto 1 - Login Borda</p></button></td>
+                    <td><button onclick="abrirPopup(this, '/projects_img/menu_responsivo.png')"><img class="imagemDiv" src="/projects_img/menu_responsivo.png"><p>Projeto 2 - Menu Responsivo</p></button></td>
+                    <td><button onclick="abrirPopup(this, '/projects_img/manipulacao_dom.png')"><img class="imagemDiv" src="/projects_img/manipulacao_dom.png"><p>Projeto 3 - Manipulação DOM</p></button></td>
+                </tr>
+            </table>
+        <p class="final">Ainda tem muito mais por vir...</p>
+        </div>
+
+        <script>
+            const popup = document.getElementById('popup');
+            const closeBtn = document.getElementById('closeBtn');
+            const imagemPopup = document.getElementById('imagemPopup');
+            const popupContent = document.querySelector('.popup-content');
+
+
+            function abrirPopup(btn, url) {
+                imagemPopup.src = url;
+                const texto = btn.querySelector('p') ? btn.querySelector('p').textContent : '';
+                const textoPopup = document.getElementById('textoPopup');
+                
+                textoPopup.textContent = texto;
+                popup.style.display = "flex";
+                popupContent.style.display = "flex";
+            }
+
+            function fecharPopup() {
+                popup.style.display = "none";
+                popupContent.style.display = "none";
+            }
+        </script>
+    </section>
+</body>
+</html>
