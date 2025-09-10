@@ -14,10 +14,7 @@ html, body{
     overflow: hidden;
 }
 
-a{
-    text-decoration: none;
-    color: #fff;
-}
+
 /*Tela de Fundo*/
 
 .background{
@@ -40,6 +37,10 @@ header{
     position: absolute;
     z-index: 1;
 
+a{
+    text-decoration: none;
+    color: #fff;
+}
 
 ul{
     display: flex;

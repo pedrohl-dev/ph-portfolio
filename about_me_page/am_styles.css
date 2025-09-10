@@ -15,10 +15,6 @@ html, body{
     overflow-y: hidden;
 }
 
-a{
-    text-decoration: none;
-    color: #fff;
-}
 /*Tela de Fundo*/
 
 .background{
@@ -40,6 +36,11 @@ header{
     justify-content: center;
     position: absolute;
     z-index: 2;
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
 }
 
 ul{
