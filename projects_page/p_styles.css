@@ -244,6 +244,11 @@ button:hover{
     letter-spacing: 2px;
 }
 
+.subtitle{
+    color: #fff;
+    text-align: center;
+}
+
 /*PopUp para exibição dos projetos*/
 
 .popup-bg{
