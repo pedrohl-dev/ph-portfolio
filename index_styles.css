@@ -264,5 +264,6 @@ footer{
         height: 20px;
         background-color: #fff;
         border-radius: 50px;
+        border: 1px solid #fff;
     }
 }
