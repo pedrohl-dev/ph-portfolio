@@ -245,8 +245,12 @@ button:hover{
 }
 
 .subtitle{
+    display: flex;
+    align-ites: center;
+    justify-content: center;
     color: #fff;
     text-align: center;
+    width: 100%;
 }
 
 /*PopUp para exibição dos projetos*/
