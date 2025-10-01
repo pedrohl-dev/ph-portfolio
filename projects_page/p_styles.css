@@ -241,7 +241,7 @@ button:hover{
         position: absolute;
         color: #ffffff81;
         font-style: italic;
-        transform: translateY(40px);
+        transform: translateY(35px);
     }
 
 }
