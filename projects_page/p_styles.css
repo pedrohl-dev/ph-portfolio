@@ -137,6 +137,7 @@ tr, td {
     padding: 55px;
 }
 
+/*Botões dos Projetos*/
 button{
     display: flex;
     flex-direction: column;
@@ -185,6 +186,7 @@ button{
 }
 
 button:hover{
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.6);
     transform: scale(1.05);
     cursor: pointer;
     transition: 0.2s;
