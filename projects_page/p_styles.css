@@ -150,7 +150,12 @@ button{
     transition: 0.2s;
     padding: 6px;
 
+    a{
+        color: black;
+    }
+
     p{
+        color: black;
         text-align: center;
         margin: 5px;
         background-color: white;
@@ -162,6 +167,11 @@ button{
         font-size: 14px;
         user-select: none;
         padding: 2px;
+        transition: 0.1s;
+
+        &:hover{
+            transform: scale(1.06);
+        }
     }
 
     img{
