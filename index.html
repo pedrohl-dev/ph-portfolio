@@ -1,53 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index_styles.css">
-    <title>Portfólio - Pedro</title>
-    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <title>pedrohl-dev</title>
 </head>
 <body>
-    <header>
-        <ul>
-            <li><a href="projects_page/projects.html"><button>Projetos</button></a></li>
-            <li class="welcome">Bem-vindo(a)</li>
-            <li><a href="about_me_page/about_me.html"><button>Sobre Mim</button></a></li>
-        </ul>
-    </header>
 
-    <img class="background" src="img/background.jpg">
+    <!-- ===== NAV ===== -->
+    <nav class="barra-fixa">
+        <span class="nav-logo">Pedro<span class="ponto">.</span></span>
+        <div class="nav-links">
+            <a href="#inicio" class="nav-ancora">Início</a>
+            <a href="#stack" class="nav-ancora">Stack</a>
+            <a href="#projetos" class="nav-ancora">Projetos</a>
+            <a href="#sobre" class="nav-ancora">Sobre</a>
+        </div>
+    </nav>
 
-    <section>
-        <div class="text-box">
-            <h1 class="my" >Meu</h1>
-            <h1 class="portfolio" >Portfólio</h1>
+    <!-- ===== HERO ===== -->
+    <section class="tela-hero" id="inicio">
+
+        <!-- Código Python de fundo -->
+        <div class="codigo-fundo" aria-hidden="true">
+            <pre class="bloco-codigo">import random
+
+def escolher_com_peso(opcoes, pesos):
+    if len(opcoes) != len(pesos):
+        raise ValueError("Opções e pesos devem ter o mesmo tamanho")
+
+    total = sum(pesos)
+    r = random.uniform(0, total)
+    acumulado = 0
+
+    for opcao, peso in zip(opcoes, pesos):
+        acumulado += peso
+        if r &lt;= acumulado:
+            return opcao</pre>
         </div>
-        
-        <div class="pr-container">
-            <div class="desc-box">
-                <p>Olá! Sou o Pedro, e esse é o meu Portfólio criado do zero, apenas com HTML, CSS e JavaScript.</p>
-                <br><br>
-                <p>Nesse Portfólio estão presentes meus projetos acadêmicos e pessoais, você pode acessar o código de cada um pelo meu GitHub disponibilizado na página "Projetos" ou logo abaixo!</p>
-                <br><br>
-                <p>Atualmente sou estudante de Desenvolvimento Web e de Sistemas, procuro cada vez mais evoluir na área da Tecnologia da Informação.</p>
-                <br><br>
-                <p>Obrigado por visitar meu Portfólio! ;)</p>
-            </div>
-            <p class="desc-box">Esse sou eu ⟶</p>
-            <div class="border-container">
-                
-                <img src="img/pedro.jpeg">
-                <div class="img-border"></div>
+
+        <!-- Gradiente sobre o código -->
+        <div class="escurecedor-hero"></div>
+
+        <!-- Moldura de foto — canto esquerdo -->
+        <div class="moldura-lateral">
+            <div class="area-foto">
+                <img
+                    class="foto-lateral"
+                    src="https://avatars.githubusercontent.com/u/229395840?v=4"
+                    alt="Pedro"
+                    onerror="this.style.display='none'; this.parentElement.querySelector('.placeholder-foto').style.display='flex'">
+                <div class="placeholder-foto">
+                </div>
             </div>
         </div>
+
+        <!-- Conteúdo principal — direita -->
+        <div class="conteudo-hero">
+
+            <div class="cartao-perfil">
+                <div class="info-perfil">
+                    <p class="saudacao">Olá, eu sou</p>
+                    <h1 class="nome-grande">Pedro<span class="ponto">.</span></h1>
+                    <p class="descricao-curta">Desenvolvedor Web &amp; Sistemas — estudante dedicado à área de Tecnologia da Informação</p>
+                </div>
+            </div>
+
+            <!-- Linha animada do Python -->
+            <div class="terminal-animado">
+                <span class="terminal-prompt">▶</span>
+                <span class="linha-digitada" id="texto-animado"></span>
+            </div>
+
+            <div class="acoes-hero">
+                <a href="teste.txt" download class="botao-primario">📃 Baixar CV</a>
+                <a href="#stack" class="botao-secundario">Ver Stack ↓</a>
+            </div>
+        </div>
+
     </section>
-    <footer>
-        <p>Redes Sociais & Contato</p>
-        <div class="img-box">
-            <a href="https://github.com/pedrohl-dev"><p><img src="img/github.png"></p></a>
-            <a href="https://www.linkedin.com/in/pedro-henrique-03a40b27a/"><p><img src="img/linkedin.png"></p></a>
+
+    <!-- ===== STACK ===== -->
+    <section class="tela-stack" id="stack">
+
+        <div class="cabecalho-secao">
+            <h2 class="titulo-secao">Minha Stack</h2>
+            <p class="sub-secao">Linguagens que tenho mais domínio atualmente</p>
         </div>
+
+        <div class="grade-stack">
+
+            <div class="cartao-tecnologia">
+                <img src="imgs/js.png" alt="JavaScript">
+                <span class="nome-tech">JavaScript</span>
+            </div>
+
+            <div class="cartao-tecnologia destaque">
+                <img src="imgs/python.png" alt="Python">
+                <span class="nome-tech">Python</span>
+            </div>
+
+            <div class="cartao-tecnologia">
+                <img src="imgs/php.png" alt="PHP">
+                <span class="nome-tech">PHP</span>
+            </div>
+
+            <div class="cartao-tecnologia">
+                <img src="imgs/sql.svg" alt="SQL">
+                <span class="nome-tech">SQL</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section class="tela-projetos" id="projetos">
+
+        <div class="cabecalho-secao">
+            <h2 class="titulo-secao">Projetos</h2>
+            <p class="sub-secao">Trabalhos acadêmicos e pessoais</p>
+        </div>
+
+        <div class="grade-projetos">
+
+            <div class="cartao-projeto">
+                <div class="capa-projeto">
+                    <span class="tag-linguagem">JavaScript</span>
+                    
+                    <img src="imgs/batalhanaval.png" alt="Batalha Naval">
+                    <div class="links-projeto">
+                        <a href="https://pedrohl-dev.github.io/batalha-naval-JS/" class="link-projeto">Ver Projeto →</a>
+                    </div>
+                </div>
+                    
+                <div class="rodape-projeto">
+                    <p class="nome-projeto">Batalha Naval</p>
+                    <p class="desc-projeto">Jogo de batalha naval interativo desenvolvido em JavaScript com interface gráfica.</p>
+                    
+                </div>
+            </div>
+
+            <div class="cartao-projeto">
+                <div class="capa-projeto">
+                    <span class="tag-linguagem">PHP / SQL</span>
+                    <img src="imgs/boxmanager.png" alt="BoxManager">
+                    <div class="links-projeto">
+                        <a href="https://box-manager.infinityfreeapp.com/" class="link-projeto">Ver Projeto →</a>
+                    </div>
+                </div>
+                <div class="rodape-projeto">
+                    <p class="nome-projeto">BoxManager</p>
+                    <p class="desc-projeto">Sistema de gestão de estoque com painel administrativo, controle de produtos e relatórios.</p>
+                </div>
+            </div>
+
+            <div class="cartao-projeto">
+                <div class="capa-projeto">
+                    <span class="tag-linguagem">JavaScript</span>
+                    <img src="imgs/calculadoraimc.png" alt="Calculadora de IMC">
+                    <div class="links-projeto">
+                        <a href="https://pedrohl-dev.github.io/calculadora-imc/" class="link-projeto">Ver Projeto →</a>
+                    </div>
+                </div>
+                <div class="rodape-projeto">
+                    <p class="nome-projeto">Calculadora de IMC</p>
+                    <p class="desc-projeto">Calculadora de Índice feito em JavaScript de Massa Corporal com interface dark e cálculo em tempo real.</p>
+                </div>
+            </div>
+
+            <div class="cartao-projeto">
+                <div class="capa-projeto">
+                    <span class="tag-linguagem">HTML / CSS</span>
+                    <img src="imgs/login_borda.png" alt="Login com Borda">
+                    <div class="links-projeto">
+                        <a href="https://pedrohl-dev.github.io/Projeto-Login-Borda/" class="link-projeto">Ver Projeto →</a>
+                    </div>
+                </div>
+                <div class="rodape-projeto">
+                    <p class="nome-projeto">Login com Borda</p>
+                    <p class="desc-projeto">Tela de login com efeito de borda animada em gradiente usando CSS puro.</p>
+                </div>
+            </div>
+
+            <div class="cartao-projeto">
+                <div class="capa-projeto">
+                    <span class="tag-linguagem">PHP / SQL</span>
+                    <img src="imgs/sgfe.png" alt="SGFE">
+                    <div class="links-projeto">
+                        <a href="https://sgfel.infinityfreeapp.com/" class="link-projeto">Ver Projeto →</a>
+                    </div>
+                </div>
+                <div class="rodape-projeto">
+                    <p class="nome-projeto">SGFEL</p>
+                    <p class="desc-projeto">Sistema de Gestão de Feiras e Eventos Locais com painel administrativo e controle de expositores.</p>
+                    
+                </div>
+            </div>
+
+            <div class="cartao-projeto">
+                <div class="capa-projeto">
+                    <span class="tag-linguagem">Python</span>
+                    <img src="imgs/simulador_score.png" alt="Simulador de Score">
+                    <div class="links-projeto">
+                        <a href="https://simulador-de-score.onrender.com/" class="link-projeto">Ver Projeto →</a>
+                    </div>
+                </div>
+                <div class="rodape-projeto">
+                    <p class="nome-projeto">Simulador de Score</p>
+                    <p class="desc-projeto">Simulador de score de crédito feito em Python com cálculo baseado em idade, renda e histórico de dívidas.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="tela-sobre" id="sobre">
+
+        <div class="cabecalho-secao">
+            <h2 class="titulo-secao">Sobre Mim</h2>
+        </div>
+
+        <div class="painel-sobre">
+
+            <div class="bloco-texto">
+                <span class="rotulo-bloco">Perfil</span>
+                <p>Estudante de <strong>Desenvolvimento Web e Sistemas</strong>, com 18 anos e sólido interesse pela área de Tecnologia da Informação. Atuo no desenvolvimento de soluções para <strong>Front-End</strong>, <strong>Back-End</strong> e <strong>Design Digital</strong>, buscando aprimoramento contínuo e excelência técnica.</p>
+            </div>
+
+            <div class="divisor-painel"></div>
+
+            <div class="bloco-texto">
+                <span class="rotulo-bloco">Objetivos</span>
+                <p>Meu foco está no desenvolvimento de competências em <strong>programação</strong> e <strong>design de sistemas</strong>, com orientação estratégica para o segmento de <strong>Segurança Cibernética</strong>. Valorizo projetos que unem rigor técnico e criatividade aplicada.</p>
+            </div>
+
+            <div class="divisor-painel"></div>
+
+            <div class="bloco-texto">
+                <span class="rotulo-bloco">Contato</span>
+                <div class="lista-redes">
+                    
+                    <a href="https://github.com/pedrohl-dev" class="link-rede">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.18c-3.2.7-3.88-1.36-3.88-1.36-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.35.78 1.04.78 2.1v3.12c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                        </svg>
+                        <span>GitHub</span>
+                        <span class="seta-rede">↗</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pedro-henrique-03a40b27a/" class="link-rede">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.49 6S0 4.88 0 3.5 1.12 1 2.49 1s2.49 1.12 2.49 2.5zM.5 8h4V24h-4V8zm7 0h3.84v2.19h.05c.53-1.01 1.84-2.08 3.79-2.08 4.05 0 4.8 2.67 4.8 6.14V24h-4v-7.83c0-1.87-.03-4.28-2.61-4.28-2.61 0-3.01 2.04-3.01 4.15V24h-4V8z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                        <span class="seta-rede">↗</span>
+                    </a>
+                    <a href="https://www.instagram.com/pedro_hfpl.7?igsh=MXMwZzdxNzhrZno3ag==" class="link-rede">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+                        </svg>
+                        <span>Instagram</span>
+                        <span class="seta-rede">↗</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape-final">
+        <p>Feito por <strong>Pedro</strong> &mdash; HTML, CSS & JS</p>
     </footer>
+
+    <!-- ===== SCRIPT: Animação de Digitação (original do Pedro) ===== -->
+    <script>
+        const elemento = document.getElementById("texto-animado");
+        const palavras = [
+            "itens = ['espada', 'escudo', 'poção']",
+            "probabilidades = [0.5, 0.3, 0.2]",
+            "resultado = escolher_com_peso(itens, probabilidades)",
+            "print('Item sorteado:', resultado)"
+        ];
+        let palavraAtualIndex = 0;
+        let letraIndex = 0;
+        let apagando = false;
+
+        function digitar() {
+            const palavraAtual = palavras[palavraAtualIndex];
+
+            if (apagando) {
+                elemento.textContent = palavraAtual.substring(0, letraIndex - 1);
+                letraIndex--;
+            } else {
+                elemento.textContent = palavraAtual.substring(0, letraIndex + 1);
+                letraIndex++;
+            }
+
+            let tempo = apagando ? 60 : 120;
+
+            if (!apagando && letraIndex === palavraAtual.length) {
+                tempo = 1800;
+                apagando = true;
+            } else if (apagando && letraIndex === 0) {
+                apagando = false;
+                palavraAtualIndex = (palavraAtualIndex + 1) % palavras.length;
+                tempo = 400;
+            }
+
+            setTimeout(digitar, tempo);
+        }
+
+        digitar();
+
+        // Smooth scroll para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href'))
+                    .scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
 </body>
 </html>
